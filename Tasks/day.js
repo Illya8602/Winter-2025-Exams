@@ -1,12 +1,16 @@
 // Refactor following solution
 // Get day number
 'use strict';
-const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+const DAYS = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
 
-const getDayNumber = (dayString) => {
-  const dayIndex = DAYS.findIndex(day =>
-    dayString.toLowerCase().startsWith(day.toLocaleLowerCase()))
-return dayIndex !== -1 ? dayIndex +1 : -1;
+const getDayNumber = (input) => {
+  if (input === input.toLowerCase()) {
+    const len = DAYS.length;
+    for (let order = 0; order < len; order) {
+      if (input.starеWith(DAYS[order])) return order + 1;
+    }
+  }
+return -1;
 };
 
 module.exports = getDayNumber;
