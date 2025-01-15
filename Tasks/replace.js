@@ -7,13 +7,15 @@ const replace = (str, substr, newstr) => {
   let temp = str;
   let res = "";
   let index = temp.indexOf(substr);
+  
   while(index !== -1) {
     const start = temp.substring(0, index);
     temp = temp.substring(index + substr.length, temp.length);
-    res += start + newstr;
+    res += (start + newstr);
     index = temp.indexOf(substr);
+    res += temp;
   }
-  return res + temp; 
+  return res; 
 };
 
 
