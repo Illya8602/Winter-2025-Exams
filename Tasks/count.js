@@ -1,7 +1,7 @@
 // Refactor following solution
 // Sum all number values in dict
 'use strict';
-const count = (obj) => {
+const count = (Object) => {
   let sum = 0;
   
   const keys = Object.keys(Object);
@@ -10,7 +10,7 @@ const count = (obj) => {
     const value = Object[key];
     if (typeof value === 'number') sum += value;
   });
-  
+
   return sum;
 };
 
